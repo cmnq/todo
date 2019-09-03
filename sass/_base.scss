@@ -70,7 +70,10 @@ body {
         background-color: $color-gray-light;
         border-top-left-radius: 2.5rem;
         border-bottom-left-radius: 2.5rem;
-
+        @include responsive(small-phone) {
+            width: 22rem;
+            
+        }
 
         &:focus {
             outline: none;
