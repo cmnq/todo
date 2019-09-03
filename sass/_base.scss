@@ -1,0 +1,123 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; // 62,5% of 1rem = 10px 
+
+    @include responsive(phone) {
+        //width <700
+        font-size: 50.25%;
+        overflow-x: hidden; // 1 rem = 9px 9/16 = 56,25%
+    }
+
+    @include responsive(small-phone) {
+        //width <700
+        font-size: 42.25%;
+    }
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manjari', sans-serif;
+    background-image: radial-gradient(circle farthest-corner at -3.7% -5%, rgba(113, 213, 225, 1) 0.3%, rgba(73, 146, 226, 1) 90.5%);
+    min-height: 100vh;
+}
+
+
+.app {
+
+
+    &__wrapper {
+        padding: 1.5rem;
+        margin-top: 2%;
+        border-radius: 2%;
+        background-color: $color-white;
+        width: 45rem;
+        min-height: 45rem;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1), 0 .6rem .6rem rgba(0, 0, 0, 0.13);
+
+        @include responsive(phone) {
+            //width <700
+            width: 80%;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        color: $color-primary;
+        border-bottom: 1px solid $color-primary;
+    }
+
+    &__labelbox {
+        display: flex;
+        justify-content: center;
+        height: 5rem;
+    }
+
+    &__input {
+        min-width: 30.5rem;
+        border: 1px solid $color-gray-light;
+        color: $color-primary;
+        transition: all .4s;
+        padding: 1rem;
+        font-size: 1.3rem;
+        background-color: $color-gray-light;
+        border-top-left-radius: 2.5rem;
+        border-bottom-left-radius: 2.5rem;
+
+
+        &:focus {
+            outline: none;
+            min-width: 32rem;
+            font-size: 1.5rem;
+        }
+    }
+
+
+    &__taskbox {
+        margin-top: 2.5rem;
+        padding: 2.5rem;
+    }
+
+    &__tasklist {
+        padding: 0;
+        flex-direction: column;
+        list-style: none;
+
+    }
+
+    &__taskitems {
+        display: flex;
+        flex-direction: row;
+        transition: all .5s;
+        width: 100%;
+        transition: all .4s;
+        align-items: baseline;
+    }
+
+
+    &__task {
+        margin: 0;
+        font-size: 2rem;
+        color: $color-gray-dark;
+    }
+
+}
+
+
+.checked {
+    text-decoration: line-through;
+    color: $color-gray;
+}
+
+
+.credits {
+    margin-top: 15rem;
+    text-align: center;
+}

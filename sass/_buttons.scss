@@ -1,0 +1,100 @@
+.app {
+
+
+    &__btn {
+        font-size: 2rem;
+        width: 5rem;
+        border: none;
+        color: $color-white;
+        background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(55, 227, 181, 1) 0%, rgba(78, 228, 126, 0.54) 90%);
+        transition: all .4s;
+
+        &:hover {
+            transition: all .2s;
+            background-color: $color-gray-light;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(-2px);
+        }
+    }
+
+    &__done {
+        margin-bottom: .7rem;
+        transition: all .2s;
+        margin-right: 2.5rem;
+        border: none;
+        background: none;
+        color: $color-secondary;
+        font-size: 2rem;
+        opacity: .5;
+        transition: all .4s;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &:active {
+            transform: translateY(-2px)
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__delete {
+        font-size: 2rem;
+        border: none;
+        color: $color-gray;
+        padding: .5rem;
+        background: none;
+        margin-left: auto;
+        margin-bottom: .5rem;
+        transition: all .3s;
+
+        &:hover {
+            color: $color-tertiary;
+            cursor: pointer;
+        }
+
+        &:active {
+            transform: translateY(-2px)
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__refreshicon {
+        margin-bottom: .7rem;
+        transition: all .2s;
+        border: none;
+        background: none;
+        color: $color-primary;
+        font-size: 1.3rem;
+        opacity: .5;
+
+        transition: all .4s;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &:active {
+            transform: translateY(-2px)
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
