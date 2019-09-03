@@ -61,7 +61,7 @@ document.addEventListener("keyup", function (event) {
     if (event.keyCode == 13) {
         const task = input.value;
 
-        if (task) {
+        if (task.length < 33) {
             addTask(task);
 
             taskList.push({
